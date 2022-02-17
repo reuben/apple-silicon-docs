@@ -29,7 +29,7 @@ $ sudo rm -r /Library/Developer/CommandLineTools
 
 Cross-building from Intel Macs to ARM Macs seems to work fairly smoothly with Xcode after that. Some notes:
 
-- `-march` flags are not supported on ARM
+- `-march`/`-mtune`/`-msse`/etc flags are not supported on ARM
 - Universal builds require building twice for different targets and then merging the binaries with `lipo` tool to create a universal binary. Can be annoying.
 - Unclear how min/max macOS version constraints interact when building fat binaries. ARM binaries have a min version of 11.0, but you usually want to build Intel macOS binaries with compatibility for older versions. See for example [1](https://github.com/pypa/wheel/issues/387).
 
