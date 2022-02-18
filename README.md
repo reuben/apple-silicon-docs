@@ -15,6 +15,8 @@ Workarounds:
 Not tested:
 - Set up a linux/aarch64 dev environment under Docker and [install aarch64 community wheels](https://github.com/KumaTea/tensorflow-aarch64/)
 
+My own pre-built wheels (Python 3.10, macOS 12.0) are here: https://github.com/reuben/apple-silicon-docs/releases/tag/prebuilt-py3.10-wheels
+
 ## Python
 
 Still figuring out universal builds, Python 3.10 + `python -m build` seems to have some built-in support, some of our packages got automatically upgraded to a universal tag. Older versions more complicated: lack of NumPy support, build system awareness of fat binaries, etc.
