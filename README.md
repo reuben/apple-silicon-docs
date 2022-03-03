@@ -81,3 +81,5 @@ Cross-building from Intel Macs to ARM Macs seems to work fairly smoothly with Xc
 ## Docker
 
 Don't forget to specify `--platform` when building/running images, eg. `--platform linux/amd64`.
+
+Bazel doesn't like running inside Docker, needs to be started in batch mode and when building with QEMU it fails to self-extract: https://github.com/bazelbuild/bazel/pull/14391
