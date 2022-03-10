@@ -4,7 +4,13 @@ Notes from figuring out development on Apple Silicon.
 
 ## TensorFlow
 
-Builds fine from source, pre-built binaries are completely busted.
+Builds fine from source, pre-built binaries are completely busted:
+
+```
+2022-03-10 10:38:34.891590: F tensorflow/core/platform/cpu_feature_guard.cc:37] The TensorFlow library was compiled to use AVX instructions, but these aren't available on your machine.
+qemu: uncaught target signal 6 (Aborted) - core dumped
+Aborted
+```
 
 Linux wheels crash on QEMU/Docker due to AVX instructions: [1](https://github.com/tensorflow/tensorflow/issues/19584) [2](https://gitlab.com/qemu-project/qemu/-/issues/164) [3](https://github.com/tensorflow/tensorflow/issues/52845)
 
